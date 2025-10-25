@@ -1,2 +1,11 @@
 #!/bin/bash
-chown betty hello
+
+FILE="hello"
+
+if [ -f "$FILE" ]; then
+    chown betty "$FILE"
+    echo "Owner of '$FILE' changed to betty."
+else
+    echo "File '$FILE' does not exist."
+    exit 1
+fi
