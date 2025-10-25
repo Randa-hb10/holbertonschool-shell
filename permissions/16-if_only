@@ -1,4 +1,4 @@
-#!/bin/bash
+[ -e hello ] || exit 0
 if [ "$(stat -c %U hello)" = "guillaume" ]; then
-    sudo chown vincent hello
+    chown vincent hello
 fi
