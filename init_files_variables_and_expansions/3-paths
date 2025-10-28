@@ -1,2 +1,2 @@
 #!/bin/bash
-count=0; IFS=:; for dir in $PATH; do [ -d "$dir" ] && ((count++)); done; echo $count
+count=0; IFS=:; for dir in $PATH; do if [ -d "$dir" ]; then count=$((count+1)); fi; done; echo $count
