@@ -1,2 +1,2 @@
 #!/bin/bash
-c=0; for d in ${PATH//:/ }; do if [ -d "$d" ]; then ((c++)); fi; done; echo $c
+echo $PATH | tr ":" "\n" | grep "/" | wc -l
